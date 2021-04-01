@@ -67,16 +67,16 @@ body {
 #prev {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 16%;
 }
 
 #next {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 16%;
 }
 
-.button {
+.buttons button {
     background: transparent;
     border: #fff 2px solid;
     border-radius: 50%;
@@ -87,7 +87,7 @@ body {
     font-size: 1.2rem;
 }
 
-.button:hover {
+.buttons button:hover {
     background: #fff;
     color: #333;
 }
