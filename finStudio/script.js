@@ -1,4 +1,4 @@
-const openModal = document.querySelector('.btn-account');
+const openModal = document.querySelector('.btn-1');
 const modalBg = document.querySelector('.modal-bg');
 const closeModal = document.querySelector('.close-modal');
 const showcase = document.querySelector('.showcase');

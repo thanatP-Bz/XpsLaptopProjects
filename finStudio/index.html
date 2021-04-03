@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="utility.css">
 </head>
 <body>
     <header id="header">
@@ -16,9 +16,9 @@
 
                 <div class="nav-link">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pictures</a></li>
-                    <li><a class="btn-account" href="#">Create Account</a></li>
+                    <li><a href="#" class="btn-link">Home</a></li>
+                    <li><a href="#" class="btn-link">Pictures</a></li>
+                    <li><a class="btn-1" href="#">Create Account</a></li>
                 </ul>
                 </div>
             </nav>
@@ -29,71 +29,52 @@
                     <h1><span class="letter">F</span>inale</h1>
                     <h1><span class="letter">I</span>ntergate</h1>
                     <h1><span class="letter">N</span>otion</h1>
-                    <p>Modern Architectures, Interior, Designs and Inspirations</p>
-                    <a class="btn-showcase" href="#">Learn More</a>
+                    <p>Modern Architectures, Interiors, Designs and Inspirations</p>
+                    <a class="btn-1" href="#">Learn More</a>
                 </div>
             </div>
         </div>
     </header>
-    
-    <!-- modal-->
-    <div class="modal-bg">
-        <div class="modal">
-            <h2>Create Your Account</h2>
-            <div class="form-control">
-                <label for="username">Username: </label>
-                <input type="text" id="name">
-            </div>
-            <div class="form-control">
-                <label for="password">Password: </label>
-                <input type="password"> 
-            </div>
-            <div class="form-control">
-                <label for="email">Email: </label>
-            <input type="email" name="email" id="email">
-            </div>
-            <button class="submit">submit</button>
-            <div class="close-modal">&times;</div>
-        </div>
-    </div>
 
     <!--column about us-->
+    <section class="about-us">
      <div class="content-container-2">
          <div class="content-1">
             <h1>We have start our Projects since 2015</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur exercitationem repellat unde. Laboriosam possimus hic quia magni officiis expedita culpa, aspernatur adipisci, voluptatum doloribus blanditiis nisi earum tempore, iusto sed!</p>
-            <a href="#" class="btn-content">Learn More</a>
+            <a href="#" class="btn-1">Read More</a>
          </div>
          <div class="content-2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, neque molestias corrupti nostrum tenetur natus molestiae reprehenderit quidem? Architecto corporis amet provident maiores eum fugiat tenetur? Necessitatibus assumenda repellat veritatis.</p>
          </div>
      </div>
+    </section>
 
-     <!--detail-->
-     <div class="idea">
+     <!--detail idea-->
+     <section class="idea">
         <div class="grid-container icons">
-            <div class="grid-box bg-1">
+            <div class="grid-box">
                 <i class="far fa-lightbulb"></i>
                 <h2>ideas</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio magnam assumenda similique officia veniam! Excepturi odio quibusdam officia quod aut.</p>
             </div>
-            <div class="grid-box bg-2">
+            <div class="grid-box">
                 <i class="fas fa-house-user"></i>
                 <h2>style</h2>
                 <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis amet dignissimos nulla ex culpa quasi soluta quidem, odit quae!</P>
             </div>
-            <div class="grid-box bg-3">
+            <div class="grid-box">
                 <i class="fas fa-coins "></i>
                 <h2>budget</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi corrupti unde omnis nam doloremque maxime, inventore provident quibusdam qui sed.</p>
             </div>
-            <div class="grid-box bg-4">
+            <div class="grid-box">
                 <i class="fas fa-user-plus "></i>
                 <h2>Custom Feedback</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia voluptas qui enim eos placeat molestias aliquam assumenda autem recusandae.</p>
             </div>
         </div>
-     </div>
+     </section>
 
      <!--concept-->
      <div class="concept-container .section--hidden">
@@ -105,43 +86,46 @@
                 <h1>Our Concept</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique voluptatem fugit velit doloribus. Id dolorum, consequatur facilis alias harum fugit eos enim itaque, quaerat quod, impedit sit rem esse.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laborum nesciunt modi voluptatum illum vel facilis molestias eaque itaque dolorem.</p>
-            <a href="#" class="btn-content">Read More</a>
+            <a href="#" class="btn-1">Read More</a>
             </div>
         </div>
      </div>
 
      <!--picutres-->
-     <section class="section">
-        <div class="slider">
-               <div class="slide current">
-                   <div class="content">
-                        <h1>slide one</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
-                   </div>
-               </div>
-               <div class="slide">
-                <div class="content">
-                     <h1>slide two</h1>
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
-                </div>
-              </div>
-              <div class="slide">
-                <div class="content">
-                     <h1>slide three</h1>
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
-                </div>
-              </div>
-              <div class="slide">
-                <div class="content">
-                     <h1>slide four</h1>
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
+
+     <section class="section-title">
+         <div class="section">
+            <div class="slider">
+                    <div class="slide current">
+                        <div class="content">
+                            <h1>slide one</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                    <div class="content">
+                            <h1>slide two</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
+                    </div>
+                    </div>
+                    <div class="slide">
+                    <div class="content">
+                            <h1>slide three</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
+                    </div>
+                    </div>
+                    <div class="slide">
+                    <div class="content">
+                            <h1>slide four</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla labore excepturi vero eligendi doloremque assumenda!</p>
+                    </div>
                 </div>
             </div>
+            <div class="buttons">
+                <button id="prev"><i class="fas fa-arrow-left"></i></button>
+                <button id="next"><i class="fas fa-arrow-right"></i></button>
+                </div>
         </div>
-        <div class="buttons">
-            <button id="prev"><i class="fas fa-arrow-left"></i></button>
-            <button id="next"><i class="fas fa-arrow-right"></i></button>
-          </div>
     </section>
 
      <!--card profile-->
@@ -152,9 +136,10 @@
           </div>
          <div class="card-content">
             <div class="card-content-ct">
-            <h1>Aniwat</h1>
+            <h1>Director</h1>
+            <h2>Mr.Aniwat Suyata</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim labore laboriosam inventore quaerat nulla minima tempore ipsa tenetur beatae iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab incidunt dolor amet iusto temporibus eius?</p>
-            <a href="#" class="btn-content">Learn More</a>
+            <a href="#" class="btn-1">Read More</a>
             </div>
          </div>
         </div>
@@ -214,6 +199,27 @@
         </div>
     </footer>
 
-     <script src="script.js"></script>
+     <!-- modal-->
+     <div class="modal-bg">
+        <div class="modal">
+            <h2>Create Your Account</h2>
+            <div class="form-control">
+                <label for="username">Username: </label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-control">
+                <label for="password">Password: </label>
+                <input type="password"> 
+            </div>
+            <div class="form-control">
+                <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+            </div>
+            <button class="submit">submit</button>
+            <div class="close-modal">&times;</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
