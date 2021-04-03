@@ -102,7 +102,7 @@ body {
 }
 
 /*about Us*/
-.content-container-2 {
+.about-us {
     height: 80vh;
     max-width: 1200px;
     margin: 0 auto;
@@ -111,34 +111,21 @@ body {
     align-items: center;
 }
 
-.content-1 {
-     margin: 1rem;
+.control-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.content-1 h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bolder;
+.control-content .content-1 {
+    background-color: #f1f1f1;
+    margin-right: 1rem;
+    padding: 3rem;
 }
 
-.content-1 p {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    margin-bottom: 3rem;
-    color: #333;
-}
-
-.content-2 {
-    margin: 1rem;
-}
-
-.content-2 p {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    margin-top: 5.9rem;
-    color: #333;
+.control-content .content-2 {
+    background-color: #f1f1f1;
+    padding: 3rem;
 }
 
 
