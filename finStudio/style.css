@@ -181,9 +181,6 @@ body {
 }
 
 .concept-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--color-black);
     background-color: #f1f1f1;
 }
@@ -202,7 +199,8 @@ body {
 .concept-content .flex-control p {
     line-height: 1.4;
     font-size: 1.1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.2rem;
+    margin-bottom: 1rem;
 }
 
 .img-building {
@@ -419,7 +417,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
     height: 100px;
 }
