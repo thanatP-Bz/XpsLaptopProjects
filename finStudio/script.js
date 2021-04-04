@@ -6,7 +6,8 @@ const showcase = document.querySelector('.showcase');
 const navBar = document.querySelector('.navbar');
 
 ///open modal
-openModal.addEventListener('click', function () {
+openModal.addEventListener('click', function (e) {
+   e.preventDefault();
    modalBg.classList.add('bg-active');
    console.log(openModal);
 });
