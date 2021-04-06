@@ -379,7 +379,7 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     height: 400px; 
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 
 .latest-news h1 {
@@ -402,9 +402,12 @@ body {
     object-fit: cover;
 }
 
-.latest-content h2 {
-    padding: 2rem;
-    color: aquamarine;
+.latest-box h2 {
+    padding: 0.8rem 0;
+}
+
+.latest-box p {
+    padding-bottom: 1rem;
 }
 
 /*footer*/

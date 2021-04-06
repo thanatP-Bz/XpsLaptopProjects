@@ -60,3 +60,31 @@ li {
     background-color: var(--color-black);
     color: var(--color-white);
 }
+/*btn lastest news*/
+.news-btn {
+    padding: 0.5rem 0.8rem;
+    color: var(--color-white);
+    background-color: var(--color-btn);
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+.news-btn:hover {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    transition: ease-in 0.2s;
+}
+
+/*btn-footer*/
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.social-media a:hover {
+    color: var(--color-btn);
+    transition: ease-in 0.2s;
+}
