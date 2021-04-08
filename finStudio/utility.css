@@ -88,3 +88,9 @@ li {
     color: var(--color-btn);
     transition: ease-in 0.2s;
 }
+
+/*section hidden*/
+.section--hidden {
+    transform: translateY(8rem);
+    opacity: 0;
+}
