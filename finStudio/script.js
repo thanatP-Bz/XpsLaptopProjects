@@ -31,21 +31,22 @@ window.addEventListener('scroll', function () {
 }); */
 
 const header = document.getElementById('header');
-const navHeight = navBar.getBoundingClientRect().height;
+const navHeight = header.getBoundingClientRect();
+console.log(navHeight);
 
 const stickyNav = function (entries) {
    const [entry] = entries;
    console.log(entry);
 
-   if (!entry.isIntersecting)
+   if (!entry.isIntersecting) 
    navBar.classList.add('sticky');
-   else navBar.classList.remove('sticky');
+    else navBar.classList.remove('sticky');
 }
 const headerObsever = new IntersectionObserver
 (stickyNav, {
    root: null,
    threshold: 0,
-   rootMargin: `-${navHeight}px`,
+   rootMargin:'-377px',
 });
 
 headerObsever.observe(header);

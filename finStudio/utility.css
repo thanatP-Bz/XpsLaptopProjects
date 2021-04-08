@@ -44,7 +44,7 @@ li {
 .btn-1:hover {
     background-color: var(--color-black);
     color: var(--color-white);
-    transition:ease-in 0.5s;
+    transition:ease-in 0.3s;
 
 }
 
