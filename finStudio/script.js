@@ -50,6 +50,30 @@ const headerObsever = new IntersectionObserver
 
 headerObsever.observe(header);
 
+
+ //reveal scroll section
+const allSection = document.querySelectorAll('.section');
+
+const revealSection = function (entries,obsever) {
+    const [entry] = entries;
+    console.log(entry);
+    
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove('section--hidden');
+    obsever.unobserve(entry.target);
+}
+
+const allSectionObsever = new IntersectionObserver (revealSection, {
+    root: null,
+    threshold: 0.1,
+});
+
+allSection.forEach(section => {
+    allSectionObsever.observe(section);
+    section.classList.add('section--hidden');
+});
+
 ///slide show images
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');

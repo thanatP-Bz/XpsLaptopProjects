@@ -29,6 +29,10 @@ li {
     flex-wrap: wrap;
 }
 
+.section {
+    transition: transform 1.2s, opacity 1s;
+  }
+
 /*link manu-bar*/
 .nav-link a:hover {
     color: #e7e4e4;
@@ -91,6 +95,6 @@ li {
 
 /*section hidden*/
 .section--hidden {
-    transform: translateY(8rem);
+    transform: translateY(10rem);
     opacity: 0;
 }
