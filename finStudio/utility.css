@@ -95,6 +95,6 @@ li {
 
 /*section hidden*/
 .section--hidden {
-    transform: translateY(10rem);
+    transform: translateY(9rem);
     opacity: 0;
 }
