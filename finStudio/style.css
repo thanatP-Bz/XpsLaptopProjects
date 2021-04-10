@@ -488,7 +488,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 30px 40px;
-    width: 450px;
+    width: 700px;
     border-radius: 5px;
     position: relative;
 }
@@ -524,16 +524,27 @@ body {
     border-color: #70a897;
 }
 
+.form-control textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #f0f0f0
+}
+
+.form-control textarea:focus {
+    outline: 0;
+    border-color: #70a897;
+}
 .modal .submit {
     padding: 8px;
     font-size: 1rem;
     color: #fff;
     background-color: #70a897;
     font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    font-family: 'Zilla Slab', serif;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .close-modal {
