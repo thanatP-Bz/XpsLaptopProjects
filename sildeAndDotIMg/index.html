@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <section class="section">
-        <div class="slider">
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
+    <div class="slider">
+        <div class="slide"><img src="./img/pic-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="./img/pic-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="./img/pic-3.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="./img/pic-4.jpg" alt="Photo 4" /></div>
+        <div class="slide"><img src="./img/pic-4.jpg" alt="Photo 4" /></div>
 
+        <button class="slider__btn slider__btn--left"><i class="fas fa-arrow-left"></i></button>
+        <button class="slider__btn slider__btn--right"><i class="fas fa-arrow-right"></i></button>
 
-            <div class="buttons">
-                <button id="prev"><i class="fas fa-arrow-left"></i></button>
-                <button id="next"><i class="fas fa-arrow-right"></i></button>
-            </div>
-            <div class="dots"></div>
-        </div>
-    </section>
+        <button id="prev"><i class="fas fa-arrow-left"></i></button>
+        <button id="next"><i class="fas fa-arrow-right"></i></button>
+        <div class="dots">
+      </div>
+    </div>
+  <script src="script.js"></script>
 </body>
 </html>
