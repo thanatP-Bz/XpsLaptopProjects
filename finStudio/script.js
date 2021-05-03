@@ -10,11 +10,21 @@ openModal.addEventListener('click', function (e) {
    e.preventDefault();
    modalBg.classList.add('bg-active');
    console.log(openModal);
+
+   navBar.classList.remove('sticky');
 });
 
 closeModal.addEventListener('click', function () {
    modalBg.classList.remove('bg-active');
 });
+
+//smooth scrolling
+document.querySelectorAll('.btn-link').forEach((el) => {
+    el.addEventListener('click', () => {
+        e.preventDefault();
+    })
+})
+
 
 ///scroll navbar
 /* const initialCoords = modalBg.getBoundingClientRect();
@@ -75,55 +85,88 @@ allSection.forEach(section => {
 });
 
 ///slide show images
-const slides = document.querySelectorAll('.slide');
-const next = document.querySelector('#next');
-const prev = document.querySelector('#prev');
-const auto = true;
-const intervalTime = 4000;
-let slideInterval;
-
-//next slide
-const nextSlide = () => {
-    const current = document.querySelector('.current');
-    current.classList.remove('current');
-    if (current.nextElementSibling) {
-    current.nextElementSibling.classList.add('current');
-    } else {
-    slides[0].classList.add('current');
-    }
-    setTimeout(() => current.classList.remove('current'));
-};
-
-//previous slide
-const prevSlide = () => {
-    const current = document.querySelector('.current');
-    current.classList.remove('current');
-    if (current.previousElementSibling) {
-    current.previousElementSibling.classList.add('current');
-    } else {
-    slides[slides.length - 1].classList.add('current');
-    }
-    setTimeout(() => current.classList.remove('current'));
-};
-
-//button
-next.addEventListener('click', e => {
-    nextSlide();
-    if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
+//slide image
+const slider = function () {
+    const slides = document.querySelectorAll('.slide');
+    const btnLeft = document.querySelector('.slider__btn--left');
+    const btnRight = document.querySelector('.slider__btn--right');
+    const dotContainer = document.querySelector('.dots');
+    
+    let curSlide = 0;
+    const maxSlide = slides.length;
+    
+    const slider = document.querySelector('.slider');
+    slider.style.transform = 'scale(0.8)';
+    //function
+    
+    //0%, 100%, 200%, 300%
+    const createDots = function () {
+      slides.forEach(function(_, i) {
+        dotContainer.insertAdjacentHTML('beforeend', `<button class="dots__dot" data-slide="${i}"></button>`
+        );
+      });
     };
-});
-
-prev.addEventListener('click', e => {
-    prevSlide();
-    if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
+    
+    const activateDot = function(slide) {
+      document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove('dots__dot--active'));
+    
+      document.querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active');
     };
-});
-
-//time interval auto slide
-if (auto) {
-    slideInterval = setInterval(nextSlide, intervalTime);
-};
+    
+    ///go to slide
+    const goToSlide = function(slide) {
+      slides.forEach(
+        (s, i) => (s.style.transform  = `translateX(${100 * (i - slide)}%)`)
+        );
+    };
+    
+    //nextSlide
+    const nextSlide = function() {
+    
+      if (curSlide === maxSlide -1) {
+        curSlide = 0;
+      } else {
+        curSlide++;
+      };
+      goToSlide(curSlide);
+      activateDot(curSlide);
+    };
+    
+    //previous slide
+    const prevSlide = function() {
+    if (curSlide === 0)  {
+       curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+    };
+    
+    const init = function () {
+      goToSlide(0);
+      createDots();
+      activateDot(0);
+    }
+    
+    init();
+    
+    btnRight.addEventListener('click', nextSlide);
+    btnLeft.addEventListener('click', prevSlide);
+    //-100%, 0%, 100%, 200%
+    
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Arrowleft') prevSlide();
+      e.key === 'ArrowRight' && nextSlide();
+    });
+    
+    dotContainer.addEventListener('click', function (e) {
+      if (e.target.classList.contains('dots__dot')) {
+        const { slide } = e.target.dataset;
+        goToSlide(slide);
+        activateDot(slide);
+      }
+    });
+    };
+    slider();
