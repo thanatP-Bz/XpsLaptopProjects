@@ -6,7 +6,7 @@ const showcase = document.querySelector('.showcase');
 const navBar = document.querySelector('.navbar');
 
 ///open modal
-openModal.addEventListener('click', function (e) {
+openModal.addEventListener('click',(e) => {
    e.preventDefault();
    modalBg.classList.add('bg-active');
    console.log(openModal);
@@ -14,31 +14,28 @@ openModal.addEventListener('click', function (e) {
    navBar.classList.remove('sticky');
 });
 
-closeModal.addEventListener('click', function () {
+closeModal.addEventListener('click',() => {
    modalBg.classList.remove('bg-active');
 });
 
 //smooth scrolling
-document.querySelectorAll('.btn-link').forEach((el) => {
-    el.addEventListener('click', () => {
+/* document.querySelectorAll('.btn-link').forEach((el) => {
+    el.addEventListener('click', (e) => {
         e.preventDefault();
+        const id = el.getAttribute('href');
+        console.log(id);
+        document.querySelector(id).scrollIntoView({behavior: 'smooth'});
     })
-})
-
-
-///scroll navbar
-/* const initialCoords = modalBg.getBoundingClientRect();
-console.log(initialCoords);
-
-window.addEventListener('scroll', function () {
-   console.log(window.scrollY);
-
-   if (window.scrollY > initialCoords.bottom)
-   navBar.classList.add('sticky');
-   else {
-      navBar.classList.remove('sticky');
-   }
 }); */
+
+document.querySelector('.nav-link').addEventListener('click', (e) => {  
+        e.preventDefault();
+        if(e.target.classList.contains('btn-link')) {
+        const id = e.target.getAttribute('href');
+        console.log(id);
+        document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+  }
+})
 
 const header = document.getElementById('header');
 const navHeight = header.getBoundingClientRect();
@@ -96,7 +93,6 @@ const slider = function () {
     const maxSlide = slides.length;
     
     const slider = document.querySelector('.slider');
-    slider.style.transform = 'scale(0.8)';
     //function
     
     //0%, 100%, 200%, 300%

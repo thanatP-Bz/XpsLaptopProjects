@@ -38,14 +38,14 @@ li {
     color: #e7e4e4;
 } 
 
-.btn-1 {
+.btn-1, .btn-2 {
     background-color: var(--color-btn);
     color: var(--color-white);
     padding: 0.8rem 2rem;
     border-radius: 5px;
 }
 
-.btn-1:hover {
+.btn-1:hover, .btn-2:hover, .submit:hover {
     background-color: var(--color-black);
     color: var(--color-white);
     transition:ease-in 0.3s;
@@ -53,7 +53,7 @@ li {
 }
 
 /*btn content*/
-.btn-2 {
+/* .btn-2 {
     background-color: var(--color-white);
     color: var(--color-black);
     padding: 0.8rem 2rem;
@@ -63,7 +63,8 @@ li {
 .btn-2:hover {
     background-color: var(--color-black);
     color: var(--color-white);
-}
+    transition:ease-in 0.3s;
+} */
 /*btn lastest news*/
 .news-btn {
     padding: 0.5rem 0.8rem;
