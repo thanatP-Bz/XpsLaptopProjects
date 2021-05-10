@@ -11,8 +11,9 @@ a {
     text-decoration: none;
     font-size: 1.3rem;
     color: var(--color-black);
-    padding: 0.8rem 2rem;
 }
+
+
 
 .btn-link {
     color: var(--color-white);
@@ -43,6 +44,7 @@ li {
     color: var(--color-white);
     padding: 0.8rem 2rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn-1:hover, .btn-2:hover, .submit:hover {
@@ -98,4 +100,60 @@ li {
 .section--hidden {
     transform: translateY(9rem);
     opacity: 0;
+}
+
+/*media query*/
+@media (max-width: 700px) {
+    .toggle-btn {
+        display: flex;
+    }
+
+    .nav-link {
+      display: none;
+      width: 100%;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.3);  
+    }
+
+    .navbar .logo {
+        margin: 0;
+        padding: 0.75rem;
+    }
+
+    .letter {
+        color: var(--color-first);
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.7rem;
+    }
+
+    .nav-link li {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .nav-link.active {
+        display: flex;
+    }
+
+    .showcase {
+        padding: 1.5rem;
+        position: absolute;
+        top: 250px;
+        left: 0px;
+    }
+
+    .showcase .content-container {
+        max-width: 500px;
+        padding: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.3); 
+    }
+    
 }

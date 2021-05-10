@@ -3,8 +3,15 @@ const modalBg = document.querySelector('.modal-bg');
 const closeModal = document.querySelector('.close-modal');
 const showcase = document.querySelector('.showcase');
 
+const toggleButtton = document.getElementsByClassName('toggle-btn')[0];
+const resNavbar = document.getElementsByClassName('nav-link')[0];
+
 const navBar = document.querySelector('.navbar');
 
+/////navbar
+toggleButtton.addEventListener('click', () => {
+  resNavbar.classList.toggle('active');
+});
 ///open modal
 openModal.addEventListener('click',(e) => {
    e.preventDefault();
@@ -52,7 +59,7 @@ const headerObsever = new IntersectionObserver
 (stickyNav, {
    root: null,
    threshold: 0,
-   rootMargin:'-300px',
+   rootMargin:'',
 });
 
 headerObsever.observe(header);
