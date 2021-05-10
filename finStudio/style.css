@@ -41,7 +41,8 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
+    position: relative;  
 }
 
 .sticky {
@@ -62,6 +63,24 @@ body {
     color: #fff;
 }
 
+.toggle-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-btn .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+
 .nav-link ul {
     display: flex;
     margin: 1.5rem 1.2rem;
@@ -79,7 +98,6 @@ body {
 .showcase .content-container {
     max-width: 550px;
     padding: 2rem;
-    padding-bottom: 3rem;
     background-color: rgba(0, 0, 0, 0.3); 
 }
 
@@ -98,7 +116,6 @@ body {
 .showcase .content-container p {
     color:  #fff;
     font-size: 1.5rem;
-    padding-bottom: 2rem;
 }
 
 /*about Us*/
