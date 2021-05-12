@@ -55,6 +55,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+
 .logo {
     font-size: 3rem;
     font-weight: bolder;
@@ -162,7 +163,9 @@ body {
     display: grid;
     color: #333;
     font-size: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)
+    );
+    
 }
 
 .grid-box {
@@ -185,11 +188,9 @@ body {
 }
 
 .icons i {
-    padding: 1.2rem;
+    padding: 1rem;
     font-size: 2rem;
-    line-height: 1.2rem;
-    display: grid;
-    place-items: center;
+    line-height: 1rem;
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: flex-start;
@@ -199,9 +200,8 @@ body {
 .concept-container {
     height: 90vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     padding-bottom: 130px;
-
 }
 
 .concept-content {

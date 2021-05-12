@@ -13,8 +13,6 @@ a {
     color: var(--color-black);
 }
 
-
-
 .btn-link {
     color: var(--color-white);
 }
@@ -36,7 +34,9 @@ li {
 
 /*link manu-bar*/
 .nav-link a:hover {
-    color: #e7e4e4;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+
 } 
 
 .btn-1, .btn-2 {
@@ -104,6 +104,23 @@ li {
 
 /*media query*/
 @media (max-width: 700px) {
+    
+    a {
+       font-size: 1rem;
+     }
+
+    .btn-1, .btn-2 {
+        background-color: var(--color-btn);
+        color: var(--color-white);
+        padding: 0.6rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #header {
+        min-height: 90vh;
+    }
+
     .toggle-btn {
         display: flex;
     }
@@ -116,12 +133,13 @@ li {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        background-color: rgba(0, 0, 0, 0.3);  
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .navbar .logo {
         margin: 0;
         padding: 0.75rem;
+        font-size: 2rem;
     }
 
     .letter {
@@ -155,5 +173,94 @@ li {
         padding: 1.5rem;
         background-color: rgba(0, 0, 0, 0.3); 
     }
+
+    .showcase .content-container h1 {
+        color: var(--color-first);
+        font-size: 2.5rem;
+        font-weight: 1000;
+        letter-spacing: 2px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .showcase .content-container p {
+        font-size: 1.2rem;
+    }
+
+    /*about us */
+    .about-us {
+        height: 80vh;
+        padding-top: 1rem;
+        margin: 0 auto;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
+    .para-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-1 {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+
+    .control-content .para-content {
+        padding: 2rem;
+    }
+
+    /*gird container*/
+    .idea {
+        min-height: 60vh;
+        margin-bottom: 2.5rem;
+    }
+
+    .grid-box {
+        padding: 0.3rem 1.5rem;
+    }
+
+    .grid-box h2 {
+        padding: 0.8rem 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .grid-box p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .icons i {
+        padding: 1rem;
+    }
+    
+    /*concept*/
+    .concept-container {
+        padding-bottom: 2rem;
+    }
+
+    .concept-content .flex-control {
+        max-width: 450px;
+        padding-bottom: 1.2rem;
+    }
+
+    .concept-content .flex-control h1 {
+        padding: 1rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .concept-content .flex-control p {
+        padding: 0 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .concept-content .btn-1 {
+        margin-left: 1rem;
+    }
 }

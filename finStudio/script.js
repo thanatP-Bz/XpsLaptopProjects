@@ -11,6 +11,7 @@ const navBar = document.querySelector('.navbar');
 /////navbar
 toggleButtton.addEventListener('click', () => {
   resNavbar.classList.toggle('active');
+  navBar.classList.toggle('sticky-bar');
 });
 ///open modal
 openModal.addEventListener('click',(e) => {
